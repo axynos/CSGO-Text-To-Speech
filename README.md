@@ -7,4 +7,4 @@ AutoHotKey script to make TTS in CSGO.
 - [Virtual Audio Cable](http://software.muzychenko.net/eng/vac.htm)
 - [CheVolume](http://chevolume.com/)
 
-#####Warning: Virtual Audio Cable can cause BSOD because it's messing with sound drivers.
+#####Warning: Attempting to do this can cause BSOD, because you will be messing with sound drivers.
