@@ -62,19 +62,20 @@
 ;-	CurrentLine					: Current line being read
 ;-	StartupText   				: Text to speak on startup.
 ;-  TTS 						: TTS engine(Microsoft SAPI)
-LogFile = ""
-EnvGet, LocalAppData, LOCALAPPDATA
 
-;- CHANGE THIS
-;LogFile = E:\Steam\SteamApps\common\Counter-Strike Global Offensive\csgo\!tts-axynos 		;-  CHANGE THIS TO YOUR LOG FILE IN THE CSGO FOLDER
 
-CommandBuffer = %LocalAppData%\csgo_tts\csgottsbuffer.txt 									;-  CHANGE THIS TO WHERE YOU WANT YOUR BUFFER FILE TO GO
-ChatCommand = !tts
-StartupText = <volume level="20">TTS FOR CS:GO, MADE BY AXYNOS. ENJOY!</volume>
-ChatCommandLengthGetter()
-StartingLine = 0
+;- CHANGE THIS 					| EXAMPLE: E:\Steam\SteamApps\common\Counter-Strike Global Offensive\csgo\!tts-axynos
+LogFile =  ""					;-  CHANGE THIS TO YOUR LOG FILE IN THE CSGO FOLDER
+;- Don't change anything from this point onwards unless you know what you are doing.
+
 CurrentLine = 0
+StartingLine = 0
+ChatCommand = !tts
+ChatCommandLengthGetter()
+EnvGet, LocalAppData, LOCALAPPDATA
 TTS := ComObjCreate("SAPI.SpVoice")
+CommandBuffer = %LocalAppData%\csgo_tts\csgottsbuffer.txt
+StartupText = <volume level="20">TTS FOR CS:GO, MADE BY AXYNOS. ENJOY!</volume>
 ; -------------------- VARIABLES END -------------------
 
 
@@ -84,13 +85,12 @@ TTS := ComObjCreate("SAPI.SpVoice")
 IfExist, %CommandBuffer%
 	FileDelete, %CommandBuffer%
 
+if LogFile = ""
+	MsgBox, Log file not specified. Please add in your logfile to the script variables section.
+	Exit
+	
 ;-	Comment out the following line if you do not want to listen to the startup voice.
 TTS.Speak(StartupText)
-
-
-if LogFile = ""
-	MsgBox, Log file not specified.
-	Exit
 ; -------------------- END STARTUP ---------------------
 
 
