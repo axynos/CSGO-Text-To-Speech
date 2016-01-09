@@ -32,4 +32,4 @@ AutoHotKey script to make TTS in CSGO.
 17. Go into game and then enter this command into console: `+voicerecord`
 18. If all goes well you can now use !tts and should be able to hear the text to speech. Others should be able to hear it aswell.
 
-#####Disclaimer: Virtual Audio Cable can cause bluescreens because it's messing with sound drivers.
+#####Warning: Virtual Audio Cable can cause bluescreens because it's messing with sound drivers.
