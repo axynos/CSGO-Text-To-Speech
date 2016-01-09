@@ -8,7 +8,7 @@ AutoHotKey script to make TTS in CSGO.
 - [CheVolume](http://chevolume.com/)
 
 ####Instructions:
-1.  Download
+1.  [Download latest release](https://github.com/axynos/CSGO-Text-To-Speech/releases/tag/1.0-Initial)
 2.  Extract script
 3.  Open script with any text editor.
 4.  Add in your logfile path in the variables section.
