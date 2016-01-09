@@ -86,9 +86,10 @@ IfExist, %CommandBuffer%
 	FileDelete, %CommandBuffer%
 
 if LogFile = ""
+{
 	MsgBox, Log file not specified. Please add in your logfile to the script variables section.
 	Exit
-	
+}	
 ;-	Comment out the following line if you do not want to listen to the startup voice.
 TTS.Speak(StartupText)
 ; -------------------- END STARTUP ---------------------
