@@ -6,5 +6,6 @@ AutoHotKey script to make TTS in CSGO.
 - [AutoHotKey](http://autohotkey.com)
 - [Virtual Audio Cable](http://software.muzychenko.net/eng/vac.htm)
 - [CheVolume](http://chevolume.com/)
+- [My Script](https://github.com/axynos/CSGO-Text-To-Speech/releases)
 
 #####Warning: Attempting to do this can cause BSOD, because you will be messing with sound drivers.
